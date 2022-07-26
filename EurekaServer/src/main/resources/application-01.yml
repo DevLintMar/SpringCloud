@@ -1,0 +1,16 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: eurekaserver
+eureka:
+  instance:
+    hostname: eureka01
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka02:8801/eureka
