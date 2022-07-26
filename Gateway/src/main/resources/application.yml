@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: borrow-service
+          uri: lb://borrowservice
+          predicates:
+            - Path=/get
+          filters:
+            - AddRequestHeader=Test, HelloWorld!
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8800/eureka,http://localhost:8801/eureka
