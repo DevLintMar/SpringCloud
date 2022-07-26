@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: config
-  cloud:
-    config:
-      server:
-        git:
-
 eureka:
   client:
     service-url:
