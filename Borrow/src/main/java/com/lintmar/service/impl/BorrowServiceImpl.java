@@ -11,8 +11,8 @@ import com.lintmar.repository.BorrowRepository;
 import com.lintmar.service.BorrowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,10 +25,10 @@ public class BorrowServiceImpl implements BorrowService {
     @Autowired
     private BorrowRepository borrowRepository;
 
-    @Autowired
+    @Resource
     private UserClient userClient;
 
-    @Autowired
+    @Resource
     private BookClient bookClient;
 
     @Override
